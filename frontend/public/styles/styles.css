@@ -1,0 +1,91 @@
+:root{
+  --wrapper-size: 1100px;
+  /* --wrapper-size: 1173px; */
+  --input-background: rgb(246,249,252);
+  --input-inset-shadow: inset 0px 0px 0px 3px rgba(16,112,255,0.3);
+  --button-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  --button-shadow-hover: 0 7px 14px rgba(50,50,93,0.1),0 3px 6px rgba(0,0,0,0.08);
+  --button-gradient: linear-gradient(-45deg,#48a9df,#1c91eb,#1c91eb,#48a9df);
+  --font: "Open Sans","Helvetica","Arial",sans-serif;
+  --font-xs: 0.5em;
+  --font-sm: 0.8em;
+  --font-md: 1em;
+  --font-lg: 1.25em;
+  --font-xl: 1.5em;
+  --font-xll: 2em;
+  --regular: 400;
+  --semi-bold: 600;
+  --bold: 700;
+  --font-color-primary: black;
+  --font-color-primary-alpha: rgba(0,0,0,0.41);
+  --font-color-secondary: white;
+  --font-color-secondary-alpha: rgba(255,255,255,0.8);
+  --line-height: 1.5em;
+  --linear-gradient: linear-gradient(-135deg,#72c0eb,#00d2ff,#1c91eb,#3a7bd5);
+  --primary: #0085ff;
+  --primary-alpha: rgba(0,133,255,0.32);
+  --primary-hover: #0064BF;
+  --purple: #BC00FF;
+  --purple-alpha: rgba(188,0,255,0.32);
+  --yellow: #ffdb4d;
+  --yellow-alpha: rgba(255,219,77,0.32);
+  --secondary: #48a9df;
+  --dark: #272b34;
+  --highlight: #32ba1c;
+  --highlight-hover: #34c413;
+  --highlight-gradient: linear-gradient(165deg,#32ba1c 0%,#56d542 100%);
+  --clear-text: #6e6c6c;
+  --light-section: #f7f9fc;
+  --light-background: #f7f9fc;
+  --danger: #D44638;
+  --danger-hover: #B23121;
+  --gray: grey;
+  --gray-hover: #7f7e7e;
+  --list-item-border: gainsboro;
+  --placeholder: rgba(0,0,0,0.41);
+  --white: white;
+  --white-alpha: rgba(255,255,255,0.8);
+  --warning: #FFD037;
+  --success: #3ACC6C;
+  --light-gray: #f2f2f2;
+  --opacity-mask: rgba(0,0,0,0.8);
+  --shadow: rgba(0,0,0,0.35);
+  --border-radius-sm: 6px;
+  --card-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  --card-shadow-hover: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+body{
+  font-family: var(--font);
+  width: 100%;
+  background-color: #f4f3f8;
+}
+p{
+  margin: 0;
+}
+ul{
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+menu{
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+.main{
+  display:flex;
+  flex-direction: column;
+  height: calc(100vh - 50px);
+}
+
+@media (min-width: 1000px){
+  body,
+  .main{
+    height: 100vh;
+  }
+}
