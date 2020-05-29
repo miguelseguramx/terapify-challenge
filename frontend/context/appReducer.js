@@ -4,7 +4,7 @@ export default (state, action) => {
     case 'FAKE_LOGIN':
       return {
         psy: action.payload.psy,
-        appointments: action.payload.data,
+        appointments: action.payload.appointments,
         isLogged: true,
       }
     case 'FAKE_LOGOUT':

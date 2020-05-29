@@ -1,8 +1,6 @@
-  
 import React, { useReducer } from 'react'
 import appReducer from './appReducer';
 import AppContext from './appContext';
-import { loginUser } from '../../../store';
 
 const AppState = props => {
 
@@ -14,13 +12,20 @@ const AppState = props => {
 
   const [ state, dispatch ] = useReducer(appReducer, inicialState)
 
+  
   // Functions or actions
-  const fakeLogin = (user) => {
-    const data = loginUser(user)
+  const fakeLogin = async (user) => {
+    const URL = `http://localhost:3001/api/appointment?psy=${user}`
+    const res = await fetch(URL)
+    const data = await res.json()
+    const payload = {
+      psy: user,
+      appointments: data.body
+    }
     console.log(data)
     dispatch({
       type: 'FAKE_LOGIN',
-      payload: data
+      payload,
     })
   }
 

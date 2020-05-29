@@ -1,0 +1,236 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Challenge to be part of terapify",
+    "version": "1.0.0",
+    "title": "Terapify Challenge"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "Appointments",
+      "description": "Appointments Operations"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/appointment/all": {
+      "post": {
+        "tags": [
+          "Create Fake Data to test the App"
+        ],
+        "summary": "Create Fake Data",
+        "description": "Creates a lot of Fake Data to Test The App",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "201": {
+            "description": "Fake Data Appointmens"
+          }
+        }
+      }
+    },
+    "/api/appointment/": {
+      "get": {
+        "tags": [
+          "List the Appointments"
+        ],
+        "summary": "List the Appointments of a period of time",
+        "description": "List all the appointments of a period of time. By default just retrieve the appointments of three weeks",
+        "operationId": "listAppointments",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "psy",
+            "description": "Id of a Psycologist",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "psy": {
+                  "example": 1
+                },
+                "interval": {
+                  "example": {}
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An array with all the appointments"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Create an Appointment"
+        ],
+        "summary": "Create an Appointment",
+        "description": "Creates a new Appointment",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "appointment",
+            "description": "Appointment Information",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Appointment"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Appointment",
+            "schema": {
+              "$ref": "#/definitions/Appointment"
+            }
+          }
+        }
+      }
+    },
+    "/api/appointment/:id": {
+      "put": {
+        "tags": [
+          "Update an Appointment"
+        ],
+        "summary": "Update an Appointment",
+        "operationId": "updateOneAppointment",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "type": "string",
+            "name": "id",
+            "description": "Id of the Appointment",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "Appointment",
+            "description": "Appointment Updated",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Appointment"
+            }
+          }
+        ],
+        "responses": {
+          "203": {
+            "description": "Appoinitment Updated",
+            "schema": {
+              "$ref": "#/definitions/Appointment"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Delete an Appointment"
+        ],
+        "summary": "Delete an Appointment",
+        "operationId": "deleteOneAppointment",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "type": "string",
+            "name": "id",
+            "description": "Id of the Appointment",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Appointment Deleted",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Appointment": {
+      "type": "object",
+      "properties": {
+        "psy": {
+          "type": "number",
+          "example": 1
+        },
+        "user": {
+          "type": "number",
+          "example": 1
+        },
+        "service": {
+          "type": "string",
+          "example": "Cita Individual"
+        },
+        "start_time": {
+          "type": "string",
+          "example": "2020-06-03T23:00:00.000Z"
+        },
+        "end_time": {
+          "type": "string",
+          "example": "2020-06-03T23:50:00.000Z"
+        },
+        "duration": {
+          "type": "number",
+          "example": 50
+        },
+        "cost": {
+          "type": "number",
+          "example": 390
+        },
+        "totalPayed": {
+          "type": "number",
+          "example": 200
+        },
+        "currency": {
+          "type": "string",
+          "example": "MXN"
+        },
+        "payed": {
+          "type": "boolean",
+          "example": false
+        },
+        "status": {
+          "type": "string",
+          "example": "Proxima"
+        }
+      }
+    },
+    "ApiResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Learn more about Terapy Challene",
+    "url": "http://swagger.io"
+  }
+}

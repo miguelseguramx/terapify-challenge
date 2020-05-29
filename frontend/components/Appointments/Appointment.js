@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import { formatTime } from '../../../../utils/formatDate';
 
 const AppointmentItem = styled('li')`
   margin: 15px 0px;
@@ -42,6 +41,14 @@ const AppointmentItem = styled('li')`
 `
 
 const Appointment = ({ appointment }) => {
+
+  const formatTime = (i) => {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+
   const start = new Date(appointment.start_time);
   const end = new Date(appointment.end_time);
 

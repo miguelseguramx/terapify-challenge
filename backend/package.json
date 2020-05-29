@@ -1,27 +1,22 @@
 {
-  "name": "terapify-challenge-frontend",
+  "name": "terapify-challenge-backend",
   "version": "1.0.0",
-  "description": "Frontend of Terapify Challenge",
+  "description": "Backend of terapify challenge",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "start": "nodemon index.js",
+    "build": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/miguelseguramx/terapify-challenge.git"
   },
   "keywords": [
-    "Next.js",
     "JavaScript",
-    "React",
-    "Redux",
-    "'Redux",
-    "Saga'",
-    "'Style",
-    "Components'"
+    "Express",
+    "MongoDB",
+    "Mongoose"
   ],
   "author": "Miguel Segura <mianse@hotmail.com>",
   "license": "MIT",
@@ -30,12 +25,10 @@
   },
   "homepage": "https://github.com/miguelseguramx/terapify-challenge#readme",
   "dependencies": {
-    "next": "^9.4.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "styled-components": "^5.1.1"
-  },
-  "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.7"
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.16",
+    "swagger-ui-express": "^4.1.4"
   }
 }
