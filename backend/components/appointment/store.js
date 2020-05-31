@@ -1,5 +1,5 @@
 const Model = require('./model')
-const fakeData = require('../../../fakeData')
+const fakeData = require('../../fakeData')
 
 function getAppointments(psy ,startDate, endDate) {
   const start = new Date(startDate)

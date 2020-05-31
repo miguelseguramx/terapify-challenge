@@ -30,14 +30,19 @@ const AppState = props => {
 
   // Functions or actions
   const fakeLogin = async (user) => {
-    const URL = `http://localhost:3001/api/appointment?psy=${user}&startDate=2020-05-24&endDate=2020-05-31`
+
+    const BASEURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'https://terapify-challenge-backend.herokuapp.com/'  
+    
+    console.log(BASEURL)
+
+    const URL = `${BASEURL}/api/appointment?psy=${user}&startDate=2020-05-24&endDate=2020-05-31`
     const res = await fetch(URL)
     const data = await res.json()
     const payload = {
       psy: user,
       appointments: data.body
     }
-    console.log(data)
+    
     dispatch({
       type: 'FAKE_LOGIN',
       payload,
@@ -45,8 +50,7 @@ const AppState = props => {
   }
   
   const getThreeWeeks = async (user) => {
-    console.log(process.args)
-    const URL = `http://localhost:3001/api/appointment?psy=${user}&startDate=2020-05-17&endDate=2020-06-07`
+    const URL = `${BASEURL}/api/appointment?psy=${user}&startDate=2020-05-17&endDate=2020-06-07`
     const res = await fetch(URL)
     const data = await res.json()
     dispatch({
