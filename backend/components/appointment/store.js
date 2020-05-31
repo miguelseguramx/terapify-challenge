@@ -11,6 +11,17 @@ function getAppointments(psy ,startDate, endDate) {
       "psy": psy
     }
   )
+  // Si tuvieramos datos de usuarios reales usariamos algo asi
+  // .populate('user')
+  // .exec((err, populated) => {
+  //   if(err){
+  //     reject(err)
+  //     return false
+  //   }
+  //   resolve(populated)
+  // })
+  // 
+  // 
 }
 
 function addAppointment(appointment) {

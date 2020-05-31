@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "title": "Terapify Challenge"
   },
-  "host": "localhost:3000",
+  "host": "localhost:3001",
   "basePath": "/api",
   "tags": [
     {
@@ -17,7 +17,7 @@
     "http"
   ],
   "paths": {
-    "/api/appointment/all": {
+    "/appointment/all": {
       "post": {
         "tags": [
           "Create Fake Data to test the App"
@@ -34,31 +34,34 @@
         }
       }
     },
-    "/api/appointment/": {
+    "/appointment/": {
       "get": {
         "tags": [
           "List the Appointments"
         ],
         "summary": "List the Appointments of a period of time",
-        "description": "List all the appointments of a period of time. By default just retrieve the appointments of three weeks",
-        "operationId": "listAppointments",
+        "description": "List all the appointments of a period of time. Si no mandas ningun intervalo de fechas, te va a devolver los datos de 3 semanas.",
         "parameters": [
           {
-            "in": "body",
+            "in": "query",
             "name": "psy",
             "description": "Id of a Psycologist",
             "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "psy": {
-                  "example": 1
-                },
-                "interval": {
-                  "example": {}
-                }
-              }
-            }
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "startTime",
+            "description": "Fecha inicial de un periodo de tiempo",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "endTime",
+            "description": "Fecha final de un periodo de tiempo",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -97,7 +100,7 @@
         }
       }
     },
-    "/api/appointment/:id": {
+    "/appointment/:id": {
       "put": {
         "tags": [
           "Update an Appointment"
@@ -230,7 +233,7 @@
     }
   },
   "externalDocs": {
-    "description": "Learn more about Terapy Challene",
-    "url": "http://swagger.io"
+    "description": "Learn more about Terapy Challenge",
+    "url": "https://github.com/miguelseguramx/terapify-challenge"
   }
 }

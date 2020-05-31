@@ -465,7 +465,7 @@ const fakeData = [
     "totalPayed":892,
     "currency":"EUR",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -842,7 +842,7 @@ const fakeData = [
     "totalPayed":929,
     "currency":"EUR",
     "payed":false,
-    "status":"Cancelada"
+    "status":"Proxima"
   },
   {
     "psy":1,
@@ -868,7 +868,7 @@ const fakeData = [
     "totalPayed":747,
     "currency":"ARS",
     "payed":false,
-    "status":"Cancelada"
+    "status":"Proxima"
   },
   {
     "psy":1,
@@ -881,7 +881,7 @@ const fakeData = [
     "totalPayed":483,
     "currency":"USD",
     "payed":true,
-    "status":"Cancelada"
+    "status":"Proxima"
   },
   {
     "psy":1,
@@ -2116,7 +2116,7 @@ const fakeData = [
     "totalPayed":446,
     "currency":"EUR",
     "payed":false,
-    "status":"Cancelada"
+    "status":"Proxima"
   },
   {
     "psy":2,
@@ -2129,7 +2129,7 @@ const fakeData = [
     "totalPayed":413,
     "currency":"BOB",
     "payed":true,
-    "status":"Cancelada"
+    "status":"Proxima"
   },
   {
     "psy":2,

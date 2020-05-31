@@ -30,7 +30,7 @@ const AppState = props => {
 
   // Functions or actions
   const fakeLogin = async (user) => {
-    const URL = `http://localhost:3001/api/appointment?psy=${user}&startDate=2020-05-24&endDate=2020-05-30`
+    const URL = `http://localhost:3001/api/appointment?psy=${user}&startDate=2020-05-24&endDate=2020-05-31`
     const res = await fetch(URL)
     const data = await res.json()
     const payload = {
@@ -46,7 +46,7 @@ const AppState = props => {
   
   const getThreeWeeks = async (user) => {
     console.log(process.args)
-    const URL = `http://localhost:3001/api/appointment?psy=${user}`
+    const URL = `http://localhost:3001/api/appointment?psy=${user}&startDate=2020-05-17&endDate=2020-06-07`
     const res = await fetch(URL)
     const data = await res.json()
     dispatch({
@@ -58,15 +58,21 @@ const AppState = props => {
 
   const createWeeks = () => {
     const dates = []
-  
-    for(let i = -7; i < 14; i++){
-      dates.push(moment().day(i).date())
-    }
 
+    // We dont want the actual week, we just have three weeks of data
+    // for(let i = -7; i < 14; i++){
+    //   dates.push(moment().day(i).date())
+    // }
+
+    // const payload = {
+    //   lastWeek: dates.slice(0,7),
+    //   thisWeek: dates.slice(7,14),
+    //   nextWeek: dates.slice(14)
+    // };
     const payload = {
-      lastWeek: dates.slice(0,7),
-      thisWeek: dates.slice(7,14),
-      nextWeek: dates.slice(14)
+      lastWeek: [17, 18, 19, 20, 21, 22, 23],
+      thisWeek: [24, 25, 26, 27, 28, 29, 30],
+      nextWeek: [31, 1, 2, 3, 4, 5, 6],
     };
 
     dispatch({
