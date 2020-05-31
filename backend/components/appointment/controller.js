@@ -1,14 +1,24 @@
 const store = require('./store')
-const calcRangeOfDates = require('../../utils/calcRangeOfDates')
+const moment = require('moment')
 
-async function getAppointments(psy, interval) {
+async function getAppointments(psy, startDate, endDate) {
   if (!psy) throw new Error('Invalid Data')
 
-  let datesInterval = interval
-  if(Object.keys(datesInterval).length === 0){
-    const today = new Date()
-    datesInterval = calcRangeOfDates(today)
-  } 
+  let datesInterval = {}
+  if(!startDate || !endDate || startDate === '' || endDate === ''){
+    start = moment().day(-7).format()
+    end = moment().day(14).format()
+    datesInterval = {
+      startDate: start,
+      endDate: end,
+    }
+  } else {
+    datesInterval = {
+      startDate,
+      endDate
+    }
+  }
+
   return store.list(psy, datesInterval.startDate, datesInterval.endDate)
 }
 

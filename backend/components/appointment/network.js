@@ -10,8 +10,9 @@ const router = express.Router();
 
 router.get('/', 
   function(req, res) {
-    const interval = req.query.interval || {}
-    controller.getAppointments(req.query.psy, interval)
+    const startDate = req.query.startDate
+    const endDate = req.query.endDate
+    controller.getAppointments(req.query.psy, startDate, endDate)
       .then(appointments => {
         response.success(req, res, appointments, 200);
       })

@@ -14,11 +14,11 @@ const HeaderContainer = styled('header')`
   }
 `
 
-const Header = (props) => (
+const Header = ({ children, title }) => (
   <HeaderContainer>
     <Wrapper>
-      <h1 className="header__title">Citas</h1>
-      {props.children}
+      <h1 className="header__title">{title}</h1>
+      {children}
     </Wrapper>
   </HeaderContainer>
 )

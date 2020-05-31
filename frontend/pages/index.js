@@ -5,7 +5,7 @@ import AppointmentLayout from '../components/Layouts/AppointmentLayout';
 const Home = () => {
   return (
     <Layout>
-      <AppointmentLayout status='Proxima'/>
+      <AppointmentLayout/>
     </Layout>
   )
 }

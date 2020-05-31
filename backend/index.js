@@ -9,12 +9,12 @@ const USER = encodeURIComponent(config.dbUser)
 const PASSWORD = encodeURIComponent(config.dbPassword)
 const DB_NAME = config.dbName
 const MONGO_URI = `mongodb+srv://${USER}:${PASSWORD}@${config.dbHost}:${DB_NAME}?retryWrites=true&w=majority`
+const helmet = require('helmet')
 
-
-
-connectDb(MONGO_URI)
 
 const app = express()
+app.use(helmet())
+connectDb(MONGO_URI)
 
 app.use(cors());
 app.use(express.json());

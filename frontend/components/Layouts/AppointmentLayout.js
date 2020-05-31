@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Header from '../Header';
 import HomeNavBar from '../HomeNavBar';
 import MenuNavBar from '../MenuNavBar';
@@ -8,8 +8,8 @@ import FakeLogin from '../FakeLogin';
 import Empty from '../Empty';
 import AppContext from '../../context/appContext'
 
-const AppointmentLayout = ({status}) => {
-
+const AppointmentLayout = () => {
+  const [ status, setStatus ] = useState('Proxima')
   const { isLogged, appointments } = useContext(AppContext);
 
   return (
@@ -19,8 +19,8 @@ const AppointmentLayout = ({status}) => {
           <FakeLogin />
         </Modal>
       )}
-      <Header>
-        <HomeNavBar status={status} />
+      <Header title='Citas'>
+        <HomeNavBar status={status} setStatus={setStatus}/>
       </Header>
       {appointments.length === 0 ? 
         <Empty text='No hay citas para mostar' /> :

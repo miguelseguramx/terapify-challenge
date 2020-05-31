@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link'
 
 const NavBar = styled('div')`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   
     .nav-bar__item{
+      border: none;
+      outline: none;
+      background-color: white;
       transition-duration: 3ms;
       color: var(--clear-text);
       transition-duration: 3ms;
@@ -33,23 +35,26 @@ const NavBar = styled('div')`
     }
 `
 
-const HomeNavBar = ({ status }) => (
+const HomeNavBar = ({ status, setStatus }) => (
   <NavBar>
-    <Link href="/">
-      <a className={`nav-bar__item ${status === 'Proxima' && 'nav-bar__item-active' }`}>
-        <p className="nav-bar__text">Proximas</p>
-      </a>
-    </Link>
-    <Link href="/finalizadas">
-      <a className={`nav-bar__item ${status === 'Finalizada' && 'nav-bar__item-active' }`}>
-        <p className="nav-bar__text">Finalizadas</p>
-      </a>
-    </Link>
-    <Link href="canceladas">
-      <a className={`nav-bar__item ${status === 'Cancelada' && 'nav-bar__item-active' }`}>
-        <p className="nav-bar__text">Canceladas</p>
-      </a>
-    </Link>
+    <button 
+      className={`nav-bar__item ${status === 'Proxima' && 'nav-bar__item-active' }`}
+      onClick={() => setStatus('Proxima')}
+    >
+      <p className="nav-bar__text">Proximas</p>
+    </button>
+    <button 
+      className={`nav-bar__item ${status === 'Finalizada' && 'nav-bar__item-active' }`}
+      onClick={() => setStatus('Finalizada')}
+    >
+      <p className="nav-bar__text">Finalizadas</p>
+    </button>
+    <button 
+      className={`nav-bar__item ${status === 'Cancelada' && 'nav-bar__item-active' }`}
+      onClick={() => setStatus('Cancelada')}
+    >
+      <p className="nav-bar__text">Canceladas</p>
+    </button>
   </NavBar>
 )
 

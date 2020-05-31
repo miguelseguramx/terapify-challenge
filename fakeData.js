@@ -478,7 +478,7 @@ const fakeData = [
     "totalPayed":237,
     "currency":"USD",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -491,7 +491,7 @@ const fakeData = [
     "totalPayed":231,
     "currency":"BOB",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -504,7 +504,7 @@ const fakeData = [
     "totalPayed":768,
     "currency":"COP",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -595,7 +595,7 @@ const fakeData = [
     "totalPayed":452,
     "currency":"ARS",
     "payed":false,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -608,7 +608,7 @@ const fakeData = [
     "totalPayed":151,
     "currency":"USD",
     "payed":false,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -621,7 +621,7 @@ const fakeData = [
     "totalPayed":4,
     "currency":"COP",
     "payed":false,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -660,7 +660,7 @@ const fakeData = [
     "totalPayed":50,
     "currency":"MXN",
     "payed":false,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -673,7 +673,7 @@ const fakeData = [
     "totalPayed":711,
     "currency":"MXN",
     "payed":false,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -686,7 +686,7 @@ const fakeData = [
     "totalPayed":370,
     "currency":"ARS",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -699,7 +699,7 @@ const fakeData = [
     "totalPayed":299,
     "currency":"BOB",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -712,7 +712,7 @@ const fakeData = [
     "totalPayed":90,
     "currency":"ARS",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -751,7 +751,7 @@ const fakeData = [
     "totalPayed":30,
     "currency":"BOB",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -777,7 +777,7 @@ const fakeData = [
     "totalPayed":444,
     "currency":"EUR",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -803,7 +803,7 @@ const fakeData = [
     "totalPayed":247,
     "currency":"USD",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":1,
@@ -1752,7 +1752,7 @@ const fakeData = [
     "totalPayed":293,
     "currency":"MXN",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -1765,7 +1765,7 @@ const fakeData = [
     "totalPayed":130,
     "currency":"BOB",
     "payed":false,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -1778,7 +1778,7 @@ const fakeData = [
     "totalPayed":777,
     "currency":"EUR",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -1843,7 +1843,7 @@ const fakeData = [
     "totalPayed":187,
     "currency":"COP",
     "payed":false,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -1882,7 +1882,7 @@ const fakeData = [
     "totalPayed":331,
     "currency":"BOB",
     "payed":false,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -1895,7 +1895,7 @@ const fakeData = [
     "totalPayed":47,
     "currency":"USD",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -1908,7 +1908,7 @@ const fakeData = [
     "totalPayed":392,
     "currency":"EUR",
     "payed":false,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -1947,7 +1947,7 @@ const fakeData = [
     "totalPayed":296,
     "currency":"MXN",
     "payed":false,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -1960,7 +1960,7 @@ const fakeData = [
     "totalPayed":182,
     "currency":"EUR",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -1973,7 +1973,7 @@ const fakeData = [
     "totalPayed":600,
     "currency":"ARS",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -2012,7 +2012,7 @@ const fakeData = [
     "totalPayed":250,
     "currency":"USD",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -2038,7 +2038,7 @@ const fakeData = [
     "totalPayed":290,
     "currency":"MXN",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -2051,7 +2051,7 @@ const fakeData = [
     "totalPayed":190,
     "currency":"COP",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -2064,7 +2064,7 @@ const fakeData = [
     "totalPayed":38,
     "currency":"BOB",
     "payed":false,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,
@@ -2103,7 +2103,7 @@ const fakeData = [
     "totalPayed":467,
     "currency":"ARS",
     "payed":true,
-    "status":"Proxima"
+    "status":"Finalizada"
   },
   {
     "psy":2,

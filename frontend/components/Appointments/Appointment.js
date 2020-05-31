@@ -61,7 +61,7 @@ const Appointment = ({ appointment }) => {
     <AppointmentItem>
       <div className="appointment-content">
         <p className="appointment-type">{appointment.service}</p>
-        <p className="appointment-name">Daniel</p>
+        <p className="appointment-name">{appointment.psy === 1 ? 'Daniel' : 'Maria'}</p>
         <p className="appointment-date">
           {`de ${startHour}:${startMinutes} a ${endHour}:${endMinutes}`}
         </p>
