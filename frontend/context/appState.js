@@ -27,14 +27,10 @@ const AppState = props => {
 
   const [ state, dispatch ] = useReducer(appReducer, inicialState)
   
-
+  const BASEURL =  process.env.NEXT_PUBLIC_BASEURL
+  
   // Functions or actions
   const fakeLogin = async (user) => {
-
-    const BASEURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'https://terapify-challenge-backend.herokuapp.com/'  
-    
-    console.log(BASEURL)
-
     const URL = `${BASEURL}/api/appointment?psy=${user}&startDate=2020-05-24&endDate=2020-05-31`
     const res = await fetch(URL)
     const data = await res.json()

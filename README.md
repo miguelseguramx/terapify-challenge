@@ -5,20 +5,19 @@
   ```
   git clone https://github.com/miguelseguramx/terapify-challenge.git
   ```
-2. [Configura tus variables de entorno dentro de la carpeta backend](#configuracion-de-las-variables-de-entorno)
+2. [Configura tus variables de entorno dentro de la carpeta Backend](#configuracion-de-las-variables-de-entorno)
 3. [Instala las dependencias en las carpetas principales](#instalacion-de-las-dependencias)
 4. [Levanta el backend con `npm run build`](#comandos-para-el-backed')
-5. [Ejecuta una peticion del tipo POST a localhost:3001/api/all para llenar de datos falsos tu base de datos de Mongo DB](#el-api)
-6. [Construye el front con `npm run build`](#comandos-para-el-frontend)
-7. [Levanta el front con `npm start`](#comandos-para-el-frontend)
-8. [Si deseas probar las rutas revisa la documentacion del proyecto](#puedes-probar-las-rutas-desde-tu-herramienta-favorita)
+5. [Configura tus variables de entorno dentro de la carpeta Frontend](#configuracion-de-las-variables-de-entorno)
+6. [Ejecuta una peticion del tipo POST a localhost:3001/api/all para llenar de datos falsos tu base de datos de Mongo DB](#el-api)
+7. [Construye el front con `npm run build`](#comandos-para-el-frontend)
+8. [Levanta el front con `npm start`](#comandos-para-el-frontend)
+9. [Si deseas probar las rutas revisa la documentacion del proyecto](#puedes-probar-las-rutas-desde-tu-herramienta-favorita)
 
 
 ## **Configuracion de las variables de entorno**
 
-A continuacion crea un archivo `.env` dentro de la carpeta backend que tenga la siguiente estructura (Puedes basarte en `.env.example`): 
-
-Con la informacion de tu Cluster de MongoDB
+Crea un archivo `.env` dentro de la carpeta backend con la informacion de tu Cluster de MongoDB
 
 ```
 // MONGO
@@ -27,6 +26,14 @@ DB_PASSWORD=
 DB_HOST=
 DB_NAME=
 ```
+
+Crea un archivo `.env.local` dentro de la carpeta frontend para indicarle donde esta corriendo el backend actualmente (BACKEND_URL)
+
+```
+NEXT_PUBLIC_BASEURL=http://192.168.0.4:3001 
+```
+
+Este paso es super importante para poder probar el proyecto en celulares o tablets conectados al area local
 
 [Volver arriba](#como-ejecutar-y-probar-el-proyecto)
 ## **Instalacion de las dependencias**
@@ -79,7 +86,7 @@ Para ejecutar las peticiones y probar las rutas desde postman vas a necesitar im
 Y crear un workspace donde definiras dos variables que nos ayudaran a mantener los datos actualizados gracias a los test
 
 ```
-url = http://localhost:3001
+url = BACKEND_URL
 actualId = 
 ```
 
@@ -90,11 +97,7 @@ asi guardaras el id generado por MongoDb automaticamente para despues ejecutar p
 
 ### **Puedes probar las rutas desde tu herramienta favorita**
 
-Solo debes ir desde el navegador a:
-
-`http://localhost:3001/api/docs`
-
-Donde encontraras toda la informacion necesaria para ejecutar tus propias peticiones gracias a la documentacion del backend.
+[Aqui](https://b01b463e6126.ngrok.io/api/docs/) encontraras toda la informacion necesaria para ejecutar tus propias peticiones gracias a la documentacion del backend.
 
 ![Asi luce la documentacion del backend](/sample.png "Muestra de la documentacion del backedn")
 

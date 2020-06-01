@@ -14,8 +14,7 @@ const HourContainer = styled('div')`
 const AppointmentInCalendar = styled('div')`
   position: relative;
   top: ${props => `${props.top}%`};
-  background-color: ${props => props.status === 'Proxima' && 'var(--primary)'};
-  background-color: ${props => props.status === 'Finalizada' && 'var(--success)'};
+  background-color: ${props => props.payed ? 'var(--success)' : 'var(--warning)'};
   background-color: ${props => props.status === 'Cancelada' && 'var(--danger)'};
   color: white;
   font-size: var(--font-lg);
@@ -35,8 +34,7 @@ const AppointmentInCalendar = styled('div')`
 
   :hover{
     z-index: 2;
-    background-color: ${props => props.status === 'Proxima' && 'var(--primary-hover)'};
-    background-color: ${props => props.status === 'Finalizada' && 'var(--highlight)'};
+    background-color: ${props => props.payed ? 'var(--highlight)' : 'var(--yellow)'};
     background-color: ${props => props.status === 'Cancelada' && 'var(--danger-hover)'};
     transform: scale(1.3);
     flex-direction: column;
@@ -84,10 +82,11 @@ const Hour = ({ hour, appointment }) => {
     <HourContainer>
       {
         hasAppointment && 
-        <AppointmentInCalendar status={appointment.status} top={top} height={height}>
-          {appointment.status === 'Proxima' && <p>P</p>}
-          {appointment.status === 'Finalizada' && <p>F</p>}
-          {appointment.status === 'Cancelada' && <p>C</p>}
+        <AppointmentInCalendar status={appointment.status} payed={appointment.payed} top={top} height={height}>
+          {appointment.status === 'Cancelada' ? 
+            <p>C</p> : 
+            appointment.payed ? <p>$</p> : <p>N$</p>
+          }
           <p className="time">{time}</p>
         </AppointmentInCalendar>
       }

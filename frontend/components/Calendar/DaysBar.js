@@ -11,7 +11,7 @@ const DaysBarContainer = styled('div')`
   width: calc(100% - 50px);
   grid-area: 1 / 1 / 2 / 3;
 
-  @media(min-width: 1000px){
+  @media(min-width: 1200px){
     padding-right: 17px;
   }
 
