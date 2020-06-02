@@ -97,7 +97,7 @@ asi guardaras el id generado por MongoDb automaticamente para despues ejecutar p
 
 ### **Puedes probar las rutas desde tu herramienta favorita**
 
-[Aqui](https://b01b463e6126.ngrok.io/api/docs/) encontraras toda la informacion necesaria para ejecutar tus propias peticiones gracias a la documentacion del backend.
+[Aqui](https://4cad856709e3.ngrok.io/api/docs/) encontraras toda la informacion necesaria para ejecutar tus propias peticiones gracias a la documentacion del backend.
 
 ![Asi luce la documentacion del backend](/sample.png "Muestra de la documentacion del backedn")
 
